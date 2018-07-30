@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MVCProyect.Models.POCOS.User>
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+   @foreach (var user in Model )
+   {
+    <li>@user.Name</li>
+   }
+</div>
+
