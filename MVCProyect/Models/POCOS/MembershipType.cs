@@ -13,6 +13,14 @@ namespace MVCProyect.Models.POCOS
         public short SignUpFree { get; set; }
         public byte DurationInMonth { get; set; }
         public byte DiscountRate { get; set; }
+        
+        public MembershipTypeName Name { get; set; }
+
+        public enum MembershipTypeName : byte
+        {
+            Monthy=1,
+            PayAsYouGo=2
+        }
 
     }
 }

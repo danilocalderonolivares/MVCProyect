@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201807310529514_addDataBaseAnnotation.Designer.cs">
       <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311824297_addEnumMembershipType.cs" />
+    <Compile Include="Migrations\201807311824297_addEnumMembershipType.Designer.cs">
+      <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\MVCDbContext.cs" />
@@ -247,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807310529514_addDataBaseAnnotation.resx">
       <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311824297_addEnumMembershipType.resx">
+      <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
