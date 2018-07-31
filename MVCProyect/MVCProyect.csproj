@@ -160,13 +160,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807281630138_FirstMigration.cs" />
-    <Compile Include="Migrations\201807281630138_FirstMigration.Designer.cs">
-      <DependentUpon>201807281630138_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201807310515296_firstMigration.cs" />
+    <Compile Include="Migrations\201807310515296_firstMigration.Designer.cs">
+      <DependentUpon>201807310515296_firstMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807301536339_AddMemberTable.cs" />
-    <Compile Include="Migrations\201807301536339_AddMemberTable.Designer.cs">
-      <DependentUpon>201807301536339_AddMemberTable.cs</DependentUpon>
+    <Compile Include="Migrations\201807310519562_populateUserMemberShipTypeTable.cs" />
+    <Compile Include="Migrations\201807310519562_populateUserMemberShipTypeTable.Designer.cs">
+      <DependentUpon>201807310519562_populateUserMemberShipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310529514_addDataBaseAnnotation.cs" />
+    <Compile Include="Migrations\201807310529514_addDataBaseAnnotation.Designer.cs">
+      <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -216,6 +220,7 @@
     <Content Include="Views\Movies\Test.cshtml" />
     <Content Include="Views\Users\UserList.cshtml" />
     <Content Include="Views\Shared\_Bar.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,11 +239,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807281630138_FirstMigration.resx">
-      <DependentUpon>201807281630138_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807310515296_firstMigration.resx">
+      <DependentUpon>201807310515296_firstMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807301536339_AddMemberTable.resx">
-      <DependentUpon>201807301536339_AddMemberTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807310519562_populateUserMemberShipTypeTable.resx">
+      <DependentUpon>201807310519562_populateUserMemberShipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310529514_addDataBaseAnnotation.resx">
+      <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

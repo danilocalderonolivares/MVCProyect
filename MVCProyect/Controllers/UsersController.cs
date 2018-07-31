@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,13 +10,37 @@ namespace MVCProyect.Controllers
 {
     public class UsersController : Controller
     {
+        private MvcDbContext applicationContex;
+
+        public UsersController()
+        {
+            applicationContex = new MvcDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            applicationContex.Dispose();
+        }
+
         // GET: Users
         public ActionResult UserList()
         {
-            MvcDbContext dbContext = new MvcDbContext();
-            var users = dbContext.Users.ToList();
+
+            var users = applicationContex.Users.Include(c => c.MembershipType).ToList();
 
             return View(users);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var user = applicationContex.Users.SingleOrDefault(c=> c.Id == id);
+            if (user.Equals(null))
+            {
+                return HttpNotFound();
+            }
+
+            return View(user);
+
         }
     }
 }

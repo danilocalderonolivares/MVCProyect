@@ -8,25 +8,11 @@ namespace MVCProyect.Models.POCOS
 {
     public class MembershipType
     {
-        public int MembershipTypeId { get; set; }
+        public byte Id { get; set; }
 
-        [Required]
-        [StringLength(200)]
-        public string Name { get; set; }
-        [Required]
         public short SignUpFree { get; set; }
-        [Required]
         public byte DurationInMonth { get; set; }
-
-        [Required]
-        public int DiscontRate { get; set; }
-
-       
-        public enum MembershipTypeValidation : byte
-        {
-            Unknow,
-            PayAsYouGo
-        }
+        public byte DiscountRate { get; set; }
 
     }
 }

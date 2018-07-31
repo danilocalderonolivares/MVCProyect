@@ -14,8 +14,9 @@ namespace MVCProyect.Models
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType>  membershipTypes { get; set; }
 
-        public MvcDbContext() : base("DefaultConnection", throwIfV1Schema: false)
+        public MvcDbContext() : base("MVCDataBase", throwIfV1Schema: false)
         {
+            
         }
 
         public static MvcDbContext Create()

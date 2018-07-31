@@ -9,23 +9,16 @@ namespace MVCProyect.Models.POCOS
     public class User
     {
 
-        public int UserId { get; set; }
+        public int Id { get; set; }
         [Required]
-        [StringLength(256)]
+        [StringLength(200)]
         public string Name { get; set; }
 
-        [Required]
-        public bool IsSuscribedToNewsLetter { get; set; }
-
-        public MembershipType MembershipType { get; set; }
-
-        [Required]
-        [Display(Name = "Membership Type")]
+        public bool IsSubscribedToNewsletter { get; set; }
+        public MembershipType MembershipType  { get; set; }
         public byte MembershipTypeId { get; set; }
 
-        [DataType(DataType.Date)]
-        [Display(Name = "Date of Birth")]
-        public DateTime? Birthdate { get; set; }
+
 
     }
 }
