@@ -5,5 +5,17 @@
 }
 <div>
     <h3>@Model.Name</h3>
+    
+    @if(@Model.MembershipType.Name != null){
+        <ul>
+            <li>Membership type : @Model.MembershipType.Name</li>
+        </ul>
+    }
+    @if(@Model.Birthdate != null){
+        <ul>
+            <li>Birthday : @Model.Birthdate</li>
+        </ul>
+    }
+  
 </div>
 

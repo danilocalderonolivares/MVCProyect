@@ -176,6 +176,18 @@
     <Compile Include="Migrations\201807311824297_addEnumMembershipType.Designer.cs">
       <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311845130_addBirthdateToUser.cs" />
+    <Compile Include="Migrations\201807311845130_addBirthdateToUser.Designer.cs">
+      <DependentUpon>201807311845130_addBirthdateToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311852559_fixdatetimerformat.cs" />
+    <Compile Include="Migrations\201807311852559_fixdatetimerformat.Designer.cs">
+      <DependentUpon>201807311852559_fixdatetimerformat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311857528_addDateFormart.cs" />
+    <Compile Include="Migrations\201807311857528_addDateFormart.Designer.cs">
+      <DependentUpon>201807311857528_addDateFormart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\MVCDbContext.cs" />
@@ -254,6 +266,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807311824297_addEnumMembershipType.resx">
       <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311845130_addBirthdateToUser.resx">
+      <DependentUpon>201807311845130_addBirthdateToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311852559_fixdatetimerformat.resx">
+      <DependentUpon>201807311852559_fixdatetimerformat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311857528_addDateFormart.resx">
+      <DependentUpon>201807311857528_addDateFormart.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCProyect.Models;
+using MVCProyect.Models.POCOS;
 
 namespace MVCProyect.Controllers
 {
@@ -33,12 +34,17 @@ namespace MVCProyect.Controllers
 
         public ActionResult Details(int id)
         {
-            var user = applicationContex.Users.SingleOrDefault(c=> c.Id == id);
+            var user = applicationContex.Users
+                .Include(m => m.MembershipType)
+                .SingleOrDefault(c => c.Id == id);
+                
+
             if (user.Equals(null))
             {
-                return HttpNotFound();
+                return HttpNotFound("This user does not exist");
             }
 
+         
             return View(user);
 
         }
