@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVCProyect.Models;
 using MVCProyect.Models.POCOS;
+using MVCProyect.ViewModels;
 
 namespace MVCProyect.Controllers
 {
@@ -48,5 +49,23 @@ namespace MVCProyect.Controllers
             return View(user);
 
         }
+
+        public ActionResult UserForm()
+        {
+            var membershiptypes = applicationContex.membershipTypes.ToList();
+            var viewModel =  new NewUserViewModel
+            {
+               membershipTypes = membershiptypes
+            };
+            return View(viewModel);
+        }
+        [HttpPost]
+        public ActionResult SaveUser(User user)
+        {
+            applicationContex.Users.Add(user);
+            applicationContex.SaveChanges();
+            return RedirectToAction("UserList", "Users");
+        }
+        
     }
 }

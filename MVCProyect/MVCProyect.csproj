@@ -160,41 +160,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310515296_firstMigration.cs" />
-    <Compile Include="Migrations\201807310515296_firstMigration.Designer.cs">
-      <DependentUpon>201807310515296_firstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807310519562_populateUserMemberShipTypeTable.cs" />
-    <Compile Include="Migrations\201807310519562_populateUserMemberShipTypeTable.Designer.cs">
-      <DependentUpon>201807310519562_populateUserMemberShipTypeTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807310529514_addDataBaseAnnotation.cs" />
-    <Compile Include="Migrations\201807310529514_addDataBaseAnnotation.Designer.cs">
-      <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311824297_addEnumMembershipType.cs" />
-    <Compile Include="Migrations\201807311824297_addEnumMembershipType.Designer.cs">
-      <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311845130_addBirthdateToUser.cs" />
-    <Compile Include="Migrations\201807311845130_addBirthdateToUser.Designer.cs">
-      <DependentUpon>201807311845130_addBirthdateToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311852559_fixdatetimerformat.cs" />
-    <Compile Include="Migrations\201807311852559_fixdatetimerformat.Designer.cs">
-      <DependentUpon>201807311852559_fixdatetimerformat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311857528_addDateFormart.cs" />
-    <Compile Include="Migrations\201807311857528_addDateFormart.Designer.cs">
-      <DependentUpon>201807311857528_addDateFormart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\MVCDbContext.cs" />
     <Compile Include="Models\POCOS\MembershipType.cs" />
     <Compile Include="Models\POCOS\Movie.cs" />
     <Compile Include="Models\POCOS\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NewUserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -233,10 +205,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Movies\Test.cshtml" />
     <Content Include="Views\Users\UserList.cshtml" />
-    <Content Include="Views\Shared\_Bar.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Movies\MovieList.cshtml" />
+    <Content Include="Views\Movies\MovieDetail.cshtml" />
+    <Content Include="Views\Users\UserForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -253,29 +227,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807310515296_firstMigration.resx">
-      <DependentUpon>201807310515296_firstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310519562_populateUserMemberShipTypeTable.resx">
-      <DependentUpon>201807310519562_populateUserMemberShipTypeTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310529514_addDataBaseAnnotation.resx">
-      <DependentUpon>201807310529514_addDataBaseAnnotation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311824297_addEnumMembershipType.resx">
-      <DependentUpon>201807311824297_addEnumMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311845130_addBirthdateToUser.resx">
-      <DependentUpon>201807311845130_addBirthdateToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311852559_fixdatetimerformat.resx">
-      <DependentUpon>201807311852559_fixdatetimerformat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311857528_addDateFormart.resx">
-      <DependentUpon>201807311857528_addDateFormart.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

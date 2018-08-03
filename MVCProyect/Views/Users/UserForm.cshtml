@@ -1,0 +1,56 @@
+﻿@model MVCProyect.ViewModels.NewUserViewModel
+
+@{
+    ViewBag.Title = "NewUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("SaveUser", "Users"))
+{
+    <div class="col-sm-4 m-2">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>User Form</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>User Name</label>
+                    @Html.TextBoxFor(u => u.User.Name,
+                        new{
+                            placeholder ="Name",
+                            @class= "form-control"
+
+                        })
+                </div>                
+                <div class="form-group">
+                    <label>Birthday</label>
+                    @Html.TextBoxFor(u => u.User.Birthdate,
+                        new{
+                            placeholder ="day/month/year",
+                            @class= "form-control"
+
+                        })
+                </div>               
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(u=> u.User.IsSubscribedToNewsletter) Subscribe to newsletter?
+                    </label>
+                   
+                </div>               
+                <div class="form-group">
+                    <label>Menbership type</label>
+                    @Html.DropDownListFor(m=> m.User.MembershipTypeId,
+                        new SelectList(Model.membershipTypes,"Id", "Name"),
+                        "Select Membership Type",
+                        new {@class="form-control"})
+                </div>
+
+                <div>
+                    <input type="submit" name="saveBtn" value="Add User" class="btn btn-primary"/>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
+

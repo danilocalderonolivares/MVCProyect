@@ -11,16 +11,18 @@
 </head>
 <body>
 
-@Html.Partial("_Bar")
-<div class="">
+@Html.Partial("_NavBar")
+<div class="container">
    
-        @RenderBody()
+    @RenderBody()
    
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-    </footer>
+ 
+    
 </div>
+<hr />
+<footer>
+    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+</footer>
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")

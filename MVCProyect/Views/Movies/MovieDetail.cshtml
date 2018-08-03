@@ -1,0 +1,18 @@
+﻿@model MVCProyect.Models.POCOS.Movie
+@{
+    ViewBag.Title = "MovieDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>@Model.Name</h3>
+    
+        <ul>
+            <li>Release Date : @Model.ReleaseDate.ToString("MM/dd/yyyy")</li>
+            <li>Date Added : @Model.DateAdded.ToString("MM/dd/yyyy")</li>
+            <li>Stock : @Model.NumberStock</li>
+            <li>Genre : @Model.NameType</li>
+        </ul>
+
+</div>
+

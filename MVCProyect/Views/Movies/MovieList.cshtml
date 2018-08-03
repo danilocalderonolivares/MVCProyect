@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVCProyect.Models.POCOS.Movie>
+@{
+    ViewBag.Title = "MovieList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-sm-8 text-left m-2 p-0">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">Movies</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                    </tr>
+
+
+                </thead>
+                <tbody>
+                    @foreach (var movie in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(movie.Name, "MovieDetail", "Movies", new
+                                {
+                                    id = movie.MovieId
+                                }, null)
+                        </td>
+                        <td>@movie.NameType</td>
+                       
+                    </tr>
+
+                }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MVCProyect.Models.POCOS
 {
-    public class User : IEnumerable
+    public class User 
     {
 
         public int Id { get; set; }
@@ -24,9 +24,6 @@ namespace MVCProyect.Models.POCOS
         public byte MembershipTypeId { get; set; }
 
 
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
